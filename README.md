@@ -20,3 +20,8 @@ These are useful resources which explains Ansible. There is no reason for me to 
 
 * http://docs.ansible.com Offical documentation
 * https://github.com/ansible/ansible-examples Offical Examples
+
+## Tasks
+
+1. Use Ansible to install nginx-webserver. For good measure do it on a couple of servers.
+2. 
