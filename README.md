@@ -13,7 +13,6 @@ Hands-on workshop which contains a few tasks to help you learn the basics of Ans
 
 * Role - Describes which role a host has. For example a server can contain both the Ubuntu role and apache-webserver role.
 
-
 ## Ansible Resources
 
 These are useful resources which explains Ansible. There is no reason for me to rewrite all that excellent documentation here.
@@ -44,5 +43,10 @@ This command runs the module (-m) ping which just pings the host.
 --private-key Path to private key used to log on to the server(s)
 
 -i path to the inventory file, followed by which group of servers to connect to.
+
+When the command above works, you can try the example playbook which comes with the project, the playbook uses the default layout from https://docs.ansible.com/ansible/playbooks_best_practices.html#directory-layout.
+```
+ansible-playbook site.yml -i inventory --private-key=~/ansible-workshop.pem
+```
 
 After you have successfully connected I recommend that you use the excellent documentation to solve the next tasks in the workshop. There is no reason to rewrite that documentation here.
