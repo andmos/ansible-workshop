@@ -21,7 +21,28 @@ These are useful resources which explains Ansible. There is no reason for me to 
 * http://docs.ansible.com Offical documentation
 * https://github.com/ansible/ansible-examples Offical Examples
 
-## Tasks
+## To get started
 
-1. Use Ansible to install nginx-webserver. For good measure do it on a couple of servers.
-2. 
+Requirements: Both host and client machines need to have Python version 2 installed. Python Version 3 will _not_ work. The host machine (running ansible) need to be a UNIX-flavour machine. Either Mac OSX or a Linux variant is recommended.
+
+1. Install ansible (homebrew or your package manager of choice)
+2. Clone this repository
+3. Make sure you can logon with SSH to the server you want to provision.
+4. In the inventory file, replace myserver.example.com with your servers IP or domain name.
+5. To issue your first ansible command on a remote server, tweak the following command:
+```
+ansible -i inventory servers --private-key=~/ansible-workshop.pem -u ubuntu --sudo -m ping
+```
+This command runs the module (-m) ping which just pings the host.
+
+-m module to use, in this case the ping module
+
+-u remote user to log in as.
+
+--sudo use sudo to gain root privileges on the server after logon
+
+--private-key Path to private key used to log on to the server(s)
+
+-i path to the inventory file, followed by which group of servers to connect to.
+
+After you have successfully connected I recommend that you use the excellent documentation to solve the next tasks in the workshop. There is no reason to rewrite that documentation here.
