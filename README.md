@@ -19,6 +19,7 @@ These are useful resources which explains Ansible. There is no reason for me to 
 
 * http://docs.ansible.com Offical documentation
 * https://github.com/ansible/ansible-examples Offical Examples
+* https://docs.ansible.com/ansible/modules_by_category.html Very useful index of modules
 
 ## To get started
 
