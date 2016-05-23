@@ -4,13 +4,17 @@ These are the different tasks which we will carry out during the workshop. The d
 
 The tasks are to install nginx (to be used as a reverse proxy), postgresql, and a simple java-application. The Java-application will run on port 8080 and be proxied through nginx.
 
-## Task 1
-You can use the apt-module to solve it (assuming Ubuntu)
+There are some roles and skeleton-files which are created to help you get started. Feel free however to make your own roles or configuration.
 
+## Task 1
 Install a couple of useful utilities, `vim`, `git` and `java8 (openjdk)`
+
+You can use the apt-module to solve it (assuming Ubuntu)
 
 ## Task 2
 Install nginx or apache, whichever you prefer, and ensure that the service is running.
+
+The skeleton project assumes nginx. Just create something else if you prefer.
 
 ## Task 3
 Install postgresql-database. Ensure that it is running and add both a database and a user. You can name the database (and the user) `ansible_workshop` for example. See the postgresql module for inspiration for how to solve this task.
