@@ -20,15 +20,10 @@ Install the Java-application.
 
 ### Intro to the application
 
-The application is a simple Hello-World Java-application. To build it JDK 8 is required. If you want to build the application locally and upload it to the server or build it directly on the server is up to you.
-
-To build the application:
-1. Clone this repo `git clone https://github.com/pal-thomassen/trh-linux-kurs`
-2. cd trh-linux-kurs/app/helloworld
-3. To build `../gradlew build oneJar`
-4. Run with java -jar build/libs/helloworld.jar server helloworld.yml
-5. The application should now listen on port 8080 and have an administration panel at port 8081.
-6. Test `localhost:8080/?name="palt"` should return
+To Run the application:
+1. Run with java -jar app/helloworld.jar server app/helloworld.yml
+2. The application should now listen on port 8080 and have an administration panel at port 8081.
+3. Test `localhost:8080/?name="palt"` should return
 ```
 {
   id: 1,
@@ -36,15 +31,13 @@ To build the application:
 }
 ```
 
-The files you need to run the application is `build/libs/helloworld.jar` and helloworld.yml(configuration file). Copy these files to the server or just run them if you have built the application on the server itself.
+The files you need to run the application is `app/helloworld.jar` and  `app/helloworld.yml`(configuration file). Copy these files to the server or just run them if you have built the application on the server itself.
 
 If you are feeling great you can make a systemd-job to autostart the application. If not just run it with `screen` for this workshop.
 
 Before startup you need to configure the database connection. When the application and database are on the same server this is very simple. Edit `helloworld.yml` and change the password for the database connection to url: jdbc:postgresql://localhost/ansible-workshop.
 
 When the application starts it will try to connect to the database and will give an error if this fails.
-
-Før oppstart må man konfigurere tilkoblingen til databasen.
 
 When everything is running the application contains 3 (badly implemented) endpoints to interact with the database. The are located under `http://serverip/database/`. The resources are
 
