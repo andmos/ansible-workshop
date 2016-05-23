@@ -1,0 +1,5 @@
+- name: "Install postgresql"
+  apt: name=postgresql,libpq-dev,python-psycopg2 state=latest update_cache=yes
+
+  ## Fill in the rest to configure postgresql. USe the template command to copy the pg_hva.conf.j2 to the server.
+  ## You can simply copy the file postgresql to the server with the files module

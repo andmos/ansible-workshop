@@ -16,7 +16,7 @@ Install nginx or apache, whichever you prefer, and ensure that the service is ru
 Install postgresql-database. Ensure that it is running and add both a database and a user. You can name the database (and the user) `ansible_workshop` for example. See the postgresql module for inspiration for how to solve this task.
 
 ## Task 4
-Install the Java-application.
+Install and run the Java-application.
 
 ### Intro to the application
 
