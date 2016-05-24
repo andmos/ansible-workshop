@@ -1,0 +1,20 @@
+# Super simple systemd startup script. Can be used to run the application as a service.
+# Place it in /etc/systemd/system/helloworld.service
+# Run systemctl daemon-reload to laod it
+# systemctl start jenkins.service      # starts the service manually
+# systemctl stop jenkins.service
+# systemctl restart jenkins.service
+# systemctl enable jenkins.service     # enable the service to start with system startup;
+#                                     # please note that it does not start the service instantly
+# systemctl disable jenkins.service    # disable automatic start
+# 
+# use journalctl and scroll to bottom for debug.
+[Unit]
+Description=HelloWorld Daemon
+
+[Service]
+ExecStart=/usr/bin/java -jar /home/ubuntu/helloworld.jar server /home/ubuntu/helloworld.yml
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
